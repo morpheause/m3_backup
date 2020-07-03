@@ -1,3 +1,6 @@
+ESX == nil
+TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+
 ESX.RegisterServerCallback('m3:backup:getCharName', function(source, cb)
 	local _source = source
 	local xPlayer = ESX.GetPlayerFromId(_source)
