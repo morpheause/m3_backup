@@ -1,3 +1,11 @@
+ESX == nil
+Citizen.CreateThread(function()
+    while ESX == nil do
+        TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+	Citizen.Wait(0)
+    end
+end)
+
 Citizen.CreateThread(function()
     TriggerEvent('chat:addSuggestion', '/bk', 'Memurlara yardım çağrısında bulun.', {
     	{ name="Destek İsteği", help="1, 2, 3" }
